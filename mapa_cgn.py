@@ -288,7 +288,7 @@ for _, row in df_cons.iterrows():
             background:{cor};
             margin-right:6px;
         "></span>
-        <b>{row['ranking_str']}</b> — {row['Nome da organização']}
+        <b>{row['ranking_str']}</b> — {row['Nome da organização']} — {row['Nome da organização']}
     </div>
     """
 
@@ -310,16 +310,17 @@ body {{ margin:0; font-family: Arial, Helvetica, sans-serif; }}
     border-left:1px solid #ccc;
     background:#fafafa;
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 2.6;
+    line-height: 1.6;
     font-size: 14px;
+    margin-top: 20px;
 }}
 .legenda h2 {{
     font-size: 18px;
     margin-bottom: 15px;
 }}
 .legenda h3 {{
-    margin-top: 25px;
-    margin-bottom: 10px;
+    margin-top: 50px;
+    margin-bottom: 15px;
 }}
 </style>
 </head>
