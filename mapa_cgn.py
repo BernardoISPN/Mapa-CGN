@@ -285,7 +285,18 @@ mapa_html = mapa_html.replace("100vw", "100%").replace("100vh", "100%")
 # ==============================
 # LEGENDA
 # ==============================
-legenda_html = "<h2>Projetos que receberam votos da CT do Edital 45 - Fundo Ecos</h2>"
+logo_url = "https://fundoecos.org.br/wp-content/uploads/2025/05/Logo-Fundo-Ecos-PNG-sem-fundo-sem-margem.png"
+
+legenda_html = f"""
+<div style="text-align:center; margin-bottom:20px;">
+    <img src="{logo_url}" 
+         style="max-width:180px; height:auto;">
+</div>
+
+<h2 style="text-align:center;">
+Projetos que receberam votos da CT do Edital 45 - Fundo Ecos
+</h2>
+"""
 
 legenda_html += "<h3 style='margin-top:20px;'>Projetos Pequenos</h3>"
 df_peq = df_pontos[df_pontos["tipo"] == "Pequeno"].sort_values("ranking_sort")
