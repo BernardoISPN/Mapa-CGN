@@ -5,16 +5,27 @@
 <meta charset="utf-8">
 <title>CGN Edital 45</title>
 <style>
-body { margin:0; font-family:Arial; }
+body { margin:0; font-family: Arial, Helvetica, sans-serif; }
 .container { display:flex; height:100vh; width:100vw; }
 .mapa { flex:4; width:70%; height:100vh; }
 .mapa iframe { width:100%; height:100%; border:none; }
 .legenda {
     flex:1;
-    padding:15px;
+    padding:20px;
     overflow-y:auto;
     border-left:1px solid #ccc;
     background:#fafafa;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2.6;
+    font-size: 14px;
+}
+.legenda h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.legenda h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
 }
 </style>
 </head>
@@ -204789,7 +204800,7 @@ body { margin:0; font-family:Arial; }
         0,
         0
       ],
-      "id": "ab91a3df-a4e3-426f-aa22-64e223d0b56d",
+      "id": "71f95c6c-c3b9-4fd9-ba94-41bcad35bca6",
       "opacity": 0.01,
       "stroked": true
     },
@@ -263301,7 +263312,7 @@ body { margin:0; font-family:Arial; }
         0,
         0
       ],
-      "id": "076f11cd-486e-407d-94a3-73b411b0e10e",
+      "id": "a533f18e-5821-493b-8324-95b1a06e121f",
       "opacity": 0.01,
       "stroked": true
     },
@@ -265142,7 +265153,7 @@ body { margin:0; font-family:Arial; }
       "getFillColor": "@@=color",
       "getPosition": "@@=[lon_plot, lat_plot]",
       "getRadius": 1,
-      "id": "d05ef3c3-b800-4161-b058-9581410e5bd4",
+      "id": "11c7845d-3f2d-4bda-a4a3-5ef273fab094",
       "pickable": true,
       "radiusMaxPixels": 22,
       "radiusMinPixels": 10,
@@ -266990,7 +267001,7 @@ body { margin:0; font-family:Arial; }
       "getPosition": "@@=[lon_plot, lat_plot]",
       "getSize": 12,
       "getText": "@@=ranking_str",
-      "id": "270687a3-c7a0-4f83-9a4f-724a75514408"
+      "id": "2f06f484-9085-4d1e-bed7-d95bb95ea5d4"
     },
     {
       "@@type": "LineLayer",
@@ -267614,7 +267625,7 @@ body { margin:0; font-family:Arial; }
       "getSourcePosition": "@@=source",
       "getTargetPosition": "@@=target",
       "getWidth": 2,
-      "id": "e046f29e-4227-4ed4-9a1b-d377b4ad9e04"
+      "id": "510fc0a2-050b-401e-9d06-7e3f8f2f42d1"
     }
   ],
   "mapProvider": "carto",
