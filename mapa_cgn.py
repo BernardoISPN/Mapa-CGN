@@ -36,13 +36,35 @@ df["ranking_str"] = df["Ranking por votos"].astype(str)
 # ==============================
 # CARREGAR GEO
 # ==============================
-print("Brasil carregado")
-
-biomas = geobr.read_biomes(year=2019)
+biomas = geobr.read_biomes(year=2019, simplified=True)
 print("Biomas carregados")
 
 municipios = geobr.read_municipality(year=2020, simplified=True)
 print("Muni carregados")
+
+estados = geobr.read_state(year=2020, simplified=True)
+estados_desejados = [
+    "Mato Grosso",
+    "Mato Grosso Do Sul",
+    "Distrito Federal",
+    "Goiás",
+    "Tocantins",
+    "Maranhão",
+    "Ceará",
+    "Piauí",
+    "Bahia",
+    "Pernambuco",
+    "Rio Grande Do Norte",
+    "Paraíba",
+    "Alagoas",
+    "Sergipe",
+    "Minas Gerais"
+]
+
+estados = estados[estados["name_state"].isin(estados_desejados)]
+
+estados = estados.to_crs(epsg=4326)
+print("Estados carregados")
 
 cerrado = biomas[biomas["name_biome"] == "Cerrado"]
 caatinga = biomas[biomas["name_biome"] == "Caatinga"]
@@ -171,6 +193,16 @@ caatinga_layer = pdk.Layer(
     get_line_color=[0, 0, 0],
 )
 
+estados_layer = pdk.Layer(
+    "GeoJsonLayer",
+    data=json.loads(estados.to_json()),
+    stroked=True,
+    filled=False, 
+    get_line_color=[0, 0, 0],
+    get_line_width=0.5,
+    line_width_min_pixels=0.5,
+)
+
 pontos_layer = pdk.Layer(
     "ScatterplotLayer",
     data=df_pontos.to_dict("records"),
@@ -217,6 +249,7 @@ deck = pdk.Deck(
     layers=[
         cerrado_layer,
         caatinga_layer,
+        estados_layer,
         pontos_layer,
         texto_layer,
         linhas_layer
