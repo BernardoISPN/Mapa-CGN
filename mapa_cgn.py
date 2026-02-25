@@ -301,7 +301,7 @@ html_final = f"""
 <style>
 body {{ margin:0; font-family:Arial; }}
 .container {{ display:flex; height:100vh; width:100vw; }}
-.mapa {{ flex:2; width:70%; height:100vh; }}
+.mapa {{ flex:4; width:70%; height:100vh; }}
 .mapa iframe {{ width:100%; height:100%; border:none; }}
 .legenda {{
     flex:1;
