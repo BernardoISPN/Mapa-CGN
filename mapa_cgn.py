@@ -299,16 +299,27 @@ html_final = f"""
 <meta charset="utf-8">
 <title>CGN Edital 45</title>
 <style>
-body {{ margin:0; font-family:Arial; }}
+body {{ margin:0; font-family: Arial, Helvetica, sans-serif; }}
 .container {{ display:flex; height:100vh; width:100vw; }}
 .mapa {{ flex:4; width:70%; height:100vh; }}
 .mapa iframe {{ width:100%; height:100%; border:none; }}
 .legenda {{
     flex:1;
-    padding:15px;
+    padding:20px;
     overflow-y:auto;
     border-left:1px solid #ccc;
     background:#fafafa;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2.6;
+    font-size: 14px;
+}}
+.legenda h2 {{
+    font-size: 18px;
+    margin-bottom: 15px;
+}}
+.legenda h3 {{
+    margin-top: 25px;
+    margin-bottom: 10px;
 }}
 </style>
 </head>
